@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VTCS Account — Vector Tech</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDYgMTA2Ij48ZyBmaWxsPSIjZmY0ZDRkIj48cmVjdCB4PSI4IiB5PSI4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9Ijg4IiB5PSI4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9IjgiIHk9IjE4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9Ijg4IiB5PSIxOCIgd2lkdGg9IjguOCIgaGVpZ2h0PSI4LjgiLz48cmVjdCB4PSIxOCIgeT0iMjgiIHdpZHRoPSI4LjgiIGhlaWdodD0iOC44Ii8+PHJlY3QgeD0iNzgiIHk9IjI4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9IjE4IiB5PSIzOCIgd2lkdGg9IjguOCIgaGVpZ2h0PSI4LjgiLz48cmVjdCB4PSI3OCIgeT0iMzgiIHdpZHRoPSI4LjgiIGhlaWdodD0iOC44Ii8+PHJlY3QgeD0iMjgiIHk9IjQ4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9IjY4IiB5PSI0OCIgd2lkdGg9IjguOCIgaGVpZ2h0PSI4LjgiLz48cmVjdCB4PSIyOCIgeT0iNTgiIHdpZHRoPSI4LjgiIGhlaWdodD0iOC44Ii8+PHJlY3QgeD0iNjgiIHk9IjU4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9IjM4IiB5PSI2OCIgd2lkdGg9IjguOCIgaGVpZ2h0PSI4LjgiLz48cmVjdCB4PSI1OCIgeT0iNjgiIHdpZHRoPSI4LjgiIGhlaWdodD0iOC44Ii8+PHJlY3QgeD0iMzgiIHk9Ijc4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9IjU4IiB5PSI3OCIgd2lkdGg9IjguOCIgaGVpZ2h0PSI4LjgiLz48cmVjdCB4PSI0OCIgeT0iODgiIHdpZHRoPSI4LjgiIGhlaWdodD0iOC44Ii8+PC9nPjwvc3ZnPg==">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAABmJLR0QA/wD/AP+gvaeTAAAE5klEQVR4nO3dzWpdZRTG8Wft5G5EQVGK/QqkBqXtTgbiDfQCClIEEaQIRShOnHgfnnOStPWjRts0UksRB+K8nXSQSSZOTvZykILjrrzhdD/5/+aL/RL+hL1hvYkEAAAAAAAAAAAAAAAAACcgKkPZ929IWik+82nMZr8XZzEC2ffnJb1VHL8fs9k/1WcvF+dWJH1XnL0tiaC9fSLpemky85qkctBddRB4HRE0rBA0rBA0rBA0rBA0rBA0rBA0rBA0rBA0rBA0rBA0rBA0rFS37Z7qaGvu1UXsFJ+Jscj8SRH/Fmf/anwaYLxqC/4bG28qc7X2xPgjJpNHpVmMQq6vX5T0dmk44seYTP6uPrv2yjEMFyR9W5rNvC2JoJ1lfqzqgv8wXJNUDpqPQlghaFghaFghaFghaFghaFghaFghaFghaFghaFghaFghaFghaFipbdtlPlHX3So+87fiHMYi85667qA0G/Fn49MA41Va8G8h+/4dSdVLAnsxne62PREkKft+RdJ7peGIH2I6XegVquqdwuOLuKDMb4rTtyQR9MnoJd0ozh5IWmjQfBTCCkHDCkHDCkHDCkHDCkHDCkHDCkHDCkHDCkHDCkHDCkHDCkHDyuK27YZhTxE3i7NcEjgpXXdXw1Bbzs980vg0wOm2uAX/9fV3Ja2Vhg8PH8bW1oO2J4IkZd+vKuJMaXg+vxPb2wu9QrW4Vw7pnDK/Lk0uLd2SRNAn47Iyawv+y8v7khYaNB+FsELQsELQsELQsELQsELQsELQsELQsELQsELQsELQsELQsELQsLLIbbtdRXxRmjw8fNj4LPjftiL2S5Pz+ePGZwFOt4Ut+LeQV6++r4jaJYGInZhOra5yZd+vSjpfGo7Yjul09FeoFvnKcXwR5yR9VZrNvCm/f2C0Junz0uQw7EsafdB8FMIKQcMKQcMKQcMKQcMKQcMKQcMKQcMKQcMKQcMKQcMKQcMKQcPK2LftdpT5WWk2c7fxaRZvGLbVdbXl/GHw+3kAYzfuBf+NjbMaho+K4z/HbPZr0wMtWG5sfKBhuFgbzs3Y3Bz9Fapxv3IMw1lJXxan55KsgtYwXFJ1wV96IWn0QfNRCCsEDSsEDSsEDSsEDSsEDSsEDSsEDSsEDSsEDSsEDSsEDSsEDSvj3raT7kv6tDTZdXttj/IaiNhU5ovSbNc9aHwaAMc16gX/FrLvVyRVLwncbXVJ4OVy/qXScMRmTKdcodL4XzmOL+KsMmtL8REHanVJ4OimSe0cR68ZBC0+CmGGoGGFoGGFoGGFoGGFoGGFoGGFoGGFoGGFoGGFoGGFoGGFoGGFbbvMe8o8KE63uySQuamjP2n76ljOBzyx4N/3q5IuF8e3Yza73+QcV658qK5bKw0PwyS2tvgtLV45pIgzyrxRnN3X0b3G4+u6c5Jq5+i655IIWnwUwgxBwwpBwwpBwwpBwwpBwwpBwwpBwwpBwwpBwwpBwwpBwwpBwwrbdvP5HS0v7xdnHzc7xzBMtLT0vDR7ePio2TkAvD5O/YJ/Cy+X82uXBCK+j+n0l8ZHOrV45Wih685Iul6azXwmiaAb4aMQVggaVggaVggaVggaVggaVggaVggaVggaVggaVggaVggaVggaVti2ayFzIulZaTai3SUBAAAAAAAAAAAAAAAAAAAA4HT5D/C3A1CjbWibAAAAAElFTkSuQmCC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=2.2.0">
+<script src="theme.js?v=2.2.0"></script>
+<style>
+  .acct label { display:block; font-size:12px; color:var(--text-dim); margin:12px 0 4px; text-transform:uppercase; letter-spacing:1px; }
+  .acct input, .acct select, .acct textarea { width:100%; padding:8px 10px; background:var(--bg); color:var(--text); border:1px solid var(--line); border-radius:4px; font:inherit; font-size:14px; }
+  .acct input:focus, .acct select:focus, .acct textarea:focus { outline:none; border-color:var(--amber); }
+  .acct textarea { min-height:70px; resize:vertical; }
+  .acct label.check { display:flex; gap:8px; align-items:center; text-transform:none; letter-spacing:0; font-size:13px; color:var(--text); }
+  .acct label.check input { width:auto; }
+  .acct button.btn { background:none; font:inherit; font-size:12px; cursor:pointer; margin-top:14px; }
+  .acct button.btn:disabled { opacity:.5; cursor:default; }
+  .acct .row { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+  .acct .row button.btn { margin-top:0; flex-shrink:0; }
+  .acct .bot { border-top:1px solid var(--line); padding:14px 0; }
+  .acct .bot:first-child { border-top:0; padding-top:0; }
+  .acct .esn { color:var(--green-bright); }
+  .acct .meta { color:var(--text-dim); font-size:12px; }
+  .acct .msg { font-size:13px; margin-top:8px; min-height:1em; }
+  .acct .msg.err { color:var(--amber); } .acct .msg.ok { color:var(--green-bright); }
+  .acct .hidden { display:none; }
+</style>
+</head>
+<body>
+
+<div class="bsod-overlay" id="bsodOverlay" hidden>
+  <div class="bsod-face">:(</div>
+  <div class="bsod-text">
+    Your site ran into a problem and needs to restart. We're just collecting some project info, then we'll restart it for you.
+    <span class="bsod-code">VT_PROJECT_PRESERVATION_FAILURE</span>
+  </div>
+  <button class="bsod-btn" id="bsodContinue">Continue</button>
+</div>
+
+<div id="crashOverlay"></div>
+<div class="crash-text" id="crashText1" style="top:12%; left:8%;">SYSTEM ERROR</div>
+<div class="crash-text" id="crashText2" style="top:60%; left:52%;">REBOOTING...</div>
+<div class="crash-text" id="crashText3" style="top:40%; left:18%;">404_VT_CORE</div>
+<div class="crash-text" id="crashText4" style="top:25%; left:60%;">BUFFER_OVERFLOW</div>
+<div class="crash-text" id="crashText5" style="top:75%; left:12%;">CORE DUMPED</div>
+<div class="crash-text" id="crashText6" style="top:8%; left:45%;">VT_FATAL_EXCEPTION</div>
+
+<div id="dosOverlay"></div>
+<div id="forbiddenOverlay">
+  <div>
+    <h1>403 Forbidden</h1>
+    <p>You don't have permission to access <strong>/</strong> on this server.</p>
+    <p class="addr">vectortech.dev</p>
+  </div>
+</div>
+
+<header>
+  <div class="logo"><svg class="logo-mark" viewBox="0 0 268 36" width="200" height="27" fill="currentColor" aria-label="Vector Tech"><rect x="0" y="0" width="3.4" height="3.4"/><rect x="32" y="0" width="3.4" height="3.4"/><rect x="0" y="4" width="3.4" height="3.4"/><rect x="32" y="4" width="3.4" height="3.4"/><rect x="4" y="8" width="3.4" height="3.4"/><rect x="28" y="8" width="3.4" height="3.4"/><rect x="4" y="12" width="3.4" height="3.4"/><rect x="28" y="12" width="3.4" height="3.4"/><rect x="8" y="16" width="3.4" height="3.4"/><rect x="24" y="16" width="3.4" height="3.4"/><rect x="8" y="20" width="3.4" height="3.4"/><rect x="24" y="20" width="3.4" height="3.4"/><rect x="12" y="24" width="3.4" height="3.4"/><rect x="20" y="24" width="3.4" height="3.4"/><rect x="12" y="28" width="3.4" height="3.4"/><rect x="20" y="28" width="3.4" height="3.4"/><rect x="16" y="32" width="3.4" height="3.4"/><rect x="40" y="8" width="3.4" height="3.4"/><rect x="44" y="8" width="3.4" height="3.4"/><rect x="48" y="8" width="3.4" height="3.4"/><rect x="52" y="8" width="3.4" height="3.4"/><rect x="56" y="8" width="3.4" height="3.4"/><rect x="40" y="12" width="3.4" height="3.4"/><rect x="40" y="16" width="3.4" height="3.4"/><rect x="40" y="20" width="3.4" height="3.4"/><rect x="44" y="20" width="3.4" height="3.4"/><rect x="48" y="20" width="3.4" height="3.4"/><rect x="52" y="20" width="3.4" height="3.4"/><rect x="40" y="24" width="3.4" height="3.4"/><rect x="40" y="28" width="3.4" height="3.4"/><rect x="40" y="32" width="3.4" height="3.4"/><rect x="44" y="32" width="3.4" height="3.4"/><rect x="48" y="32" width="3.4" height="3.4"/><rect x="52" y="32" width="3.4" height="3.4"/><rect x="56" y="32" width="3.4" height="3.4"/><rect x="68" y="8" width="3.4" height="3.4"/><rect x="72" y="8" width="3.4" height="3.4"/><rect x="76" y="8" width="3.4" height="3.4"/><rect x="80" y="8" width="3.4" height="3.4"/><rect x="64" y="12" width="3.4" height="3.4"/><rect x="64" y="16" width="3.4" height="3.4"/><rect x="64" y="20" width="3.4" height="3.4"/><rect x="64" y="24" width="3.4" height="3.4"/><rect x="64" y="28" width="3.4" height="3.4"/><rect x="68" y="32" width="3.4" height="3.4"/><rect x="72" y="32" width="3.4" height="3.4"/><rect x="76" y="32" width="3.4" height="3.4"/><rect x="80" y="32" width="3.4" height="3.4"/><rect x="88" y="8" width="3.4" height="3.4"/><rect x="92" y="8" width="3.4" height="3.4"/><rect x="96" y="8" width="3.4" height="3.4"/><rect x="100" y="8" width="3.4" height="3.4"/><rect x="104" y="8" width="3.4" height="3.4"/><rect x="96" y="12" width="3.4" height="3.4"/><rect x="96" y="16" width="3.4" height="3.4"/><rect x="96" y="20" width="3.4" height="3.4"/><rect x="96" y="24" width="3.4" height="3.4"/><rect x="96" y="28" width="3.4" height="3.4"/><rect x="96" y="32" width="3.4" height="3.4"/><rect x="116" y="8" width="3.4" height="3.4"/><rect x="120" y="8" width="3.4" height="3.4"/><rect x="124" y="8" width="3.4" height="3.4"/><rect x="112" y="12" width="3.4" height="3.4"/><rect x="128" y="12" width="3.4" height="3.4"/><rect x="112" y="16" width="3.4" height="3.4"/><rect x="128" y="16" width="3.4" height="3.4"/><rect x="112" y="20" width="3.4" height="3.4"/><rect x="128" y="20" width="3.4" height="3.4"/><rect x="112" y="24" width="3.4" height="3.4"/><rect x="128" y="24" width="3.4" height="3.4"/><rect x="112" y="28" width="3.4" height="3.4"/><rect x="128" y="28" width="3.4" height="3.4"/><rect x="116" y="32" width="3.4" height="3.4"/><rect x="120" y="32" width="3.4" height="3.4"/><rect x="124" y="32" width="3.4" height="3.4"/><rect x="136" y="8" width="3.4" height="3.4"/><rect x="140" y="8" width="3.4" height="3.4"/><rect x="144" y="8" width="3.4" height="3.4"/><rect x="148" y="8" width="3.4" height="3.4"/><rect x="136" y="12" width="3.4" height="3.4"/><rect x="152" y="12" width="3.4" height="3.4"/><rect x="136" y="16" width="3.4" height="3.4"/><rect x="152" y="16" width="3.4" height="3.4"/><rect x="136" y="20" width="3.4" height="3.4"/><rect x="140" y="20" width="3.4" height="3.4"/><rect x="144" y="20" width="3.4" height="3.4"/><rect x="148" y="20" width="3.4" height="3.4"/><rect x="136" y="24" width="3.4" height="3.4"/><rect x="144" y="24" width="3.4" height="3.4"/><rect x="136" y="28" width="3.4" height="3.4"/><rect x="148" y="28" width="3.4" height="3.4"/><rect x="136" y="32" width="3.4" height="3.4"/><rect x="152" y="32" width="3.4" height="3.4"/><rect x="176" y="8" width="3.4" height="3.4"/><rect x="180" y="8" width="3.4" height="3.4"/><rect x="184" y="8" width="3.4" height="3.4"/><rect x="188" y="8" width="3.4" height="3.4"/><rect x="192" y="8" width="3.4" height="3.4"/><rect x="184" y="12" width="3.4" height="3.4"/><rect x="184" y="16" width="3.4" height="3.4"/><rect x="184" y="20" width="3.4" height="3.4"/><rect x="184" y="24" width="3.4" height="3.4"/><rect x="184" y="28" width="3.4" height="3.4"/><rect x="184" y="32" width="3.4" height="3.4"/><rect x="200" y="8" width="3.4" height="3.4"/><rect x="204" y="8" width="3.4" height="3.4"/><rect x="208" y="8" width="3.4" height="3.4"/><rect x="212" y="8" width="3.4" height="3.4"/><rect x="216" y="8" width="3.4" height="3.4"/><rect x="200" y="12" width="3.4" height="3.4"/><rect x="200" y="16" width="3.4" height="3.4"/><rect x="200" y="20" width="3.4" height="3.4"/><rect x="204" y="20" width="3.4" height="3.4"/><rect x="208" y="20" width="3.4" height="3.4"/><rect x="212" y="20" width="3.4" height="3.4"/><rect x="200" y="24" width="3.4" height="3.4"/><rect x="200" y="28" width="3.4" height="3.4"/><rect x="200" y="32" width="3.4" height="3.4"/><rect x="204" y="32" width="3.4" height="3.4"/><rect x="208" y="32" width="3.4" height="3.4"/><rect x="212" y="32" width="3.4" height="3.4"/><rect x="216" y="32" width="3.4" height="3.4"/><rect x="228" y="8" width="3.4" height="3.4"/><rect x="232" y="8" width="3.4" height="3.4"/><rect x="236" y="8" width="3.4" height="3.4"/><rect x="240" y="8" width="3.4" height="3.4"/><rect x="224" y="12" width="3.4" height="3.4"/><rect x="224" y="16" width="3.4" height="3.4"/><rect x="224" y="20" width="3.4" height="3.4"/><rect x="224" y="24" width="3.4" height="3.4"/><rect x="224" y="28" width="3.4" height="3.4"/><rect x="228" y="32" width="3.4" height="3.4"/><rect x="232" y="32" width="3.4" height="3.4"/><rect x="236" y="32" width="3.4" height="3.4"/><rect x="240" y="32" width="3.4" height="3.4"/><rect x="248" y="8" width="3.4" height="3.4"/><rect x="264" y="8" width="3.4" height="3.4"/><rect x="248" y="12" width="3.4" height="3.4"/><rect x="264" y="12" width="3.4" height="3.4"/><rect x="248" y="16" width="3.4" height="3.4"/><rect x="264" y="16" width="3.4" height="3.4"/><rect x="248" y="20" width="3.4" height="3.4"/><rect x="252" y="20" width="3.4" height="3.4"/><rect x="256" y="20" width="3.4" height="3.4"/><rect x="260" y="20" width="3.4" height="3.4"/><rect x="264" y="20" width="3.4" height="3.4"/><rect x="248" y="24" width="3.4" height="3.4"/><rect x="264" y="24" width="3.4" height="3.4"/><rect x="248" y="28" width="3.4" height="3.4"/><rect x="264" y="28" width="3.4" height="3.4"/><rect x="248" y="32" width="3.4" height="3.4"/><rect x="264" y="32" width="3.4" height="3.4"/></svg></div>
+</header>
+
+<div class="page-wrap">
+  <a class="back-link" href="index.html">&larr; back to projects</a>
+
+  <div class="page-panel acct">
+  <h1 class="page-title">VTCS Account</h1>
+  <p class="page-sub">Your Vector Tech Community Server account. Same email and password as the Vector++ app.</p>
+
+  <div class="content-block" id="signin">
+    <h2>Sign in</h2>
+    <form id="signinForm">
+      <label for="email">Email</label><input id="email" type="email" autocomplete="username" required>
+      <label for="pw">Password</label><input id="pw" type="password" autocomplete="current-password" required>
+      <button class="btn" type="submit">Sign in</button>
+      <div id="signinMsg" class="msg"></div>
+    </form>
+    <p class="meta" style="margin-top:12px;">No account? <a href="#" id="toSignup" style="text-decoration:underline;">Create one here.</a></p>
+  </div>
+
+  <div class="content-block hidden" id="signup">
+    <h2>Create an account</h2>
+    <form id="signupForm">
+      <label for="suEmail">Email</label><input id="suEmail" type="email" autocomplete="username" required>
+      <label for="suPw">Password</label><input id="suPw" type="password" autocomplete="new-password" required>
+      <p class="meta">8-32 characters, with upper and lower case letters and a number.</p>
+      <label for="suPw2">Password again</label><input id="suPw2" type="password" autocomplete="new-password" required>
+      <button class="btn" type="submit">Create account</button>
+      <div id="signupMsg" class="msg"></div>
+    </form>
+    <p class="meta" style="margin-top:12px;">Already have one? <a href="#" id="toSignin" style="text-decoration:underline;">Sign in.</a></p>
+  </div>
+
+  <div id="account" class="hidden">
+    <div class="content-block">
+      <div class="row"><p>Signed in as <strong id="who"></strong></p><button class="btn" id="logout">Sign out</button></div>
+    </div>
+
+    <div class="content-block">
+      <h2>My Vectors</h2>
+      <div id="bots"></div>
+      <p class="meta" style="margin-top:10px;">Factory-reset a Vector or gave it away? Remove it here so it can be set up on another account.</p>
+    </div>
+
+    <div class="content-block">
+      <h2>Weather</h2>
+      <form id="weatherForm">
+        <label for="wProvider">Provider</label>
+        <select id="wProvider"><option value="">Off</option><option value="openweathermap.org">OpenWeatherMap</option><option value="weatherapi.com">WeatherAPI.com</option></select>
+        <label for="wKey">API key</label><input id="wKey" autocomplete="off">
+        <label for="wUnit">Units</label>
+        <select id="wUnit"><option value="">Vector's setting</option><option value="F">Fahrenheit</option><option value="C">Celsius</option></select>
+        <button class="btn" type="submit">Save weather</button>
+        <div id="weatherMsg" class="msg"></div>
+      </form>
+    </div>
+
+    <div class="content-block">
+      <h2>Knowledge graph</h2>
+      <form id="kgForm">
+        <label for="kProvider">Provider</label>
+        <select id="kProvider"><option value="">Off</option><option value="openai">OpenAI</option><option value="together">Together AI</option><option value="custom">Custom (OpenAI-compatible)</option><option value="houndify">Houndify</option></select>
+        <div data-for="custom"><label for="kEndpoint">Endpoint URL</label><input id="kEndpoint" autocomplete="off" placeholder="https://..."></div>
+        <div data-for="houndify"><label for="kId">Client ID</label><input id="kId" autocomplete="off"></div>
+        <div data-for="openai together custom houndify"><label for="kKey" id="kKeyLabel">API key</label><input id="kKey" autocomplete="off"></div>
+        <div data-for="openai together custom"><label for="kModel">Model (optional)</label><input id="kModel" autocomplete="off"></div>
+        <div data-for="openai together custom">
+          <label for="kName">Robot name</label><input id="kName" placeholder="Vector">
+          <label for="kPrompt">Personality prompt (optional)</label><textarea id="kPrompt"></textarea>
+          <label class="check"><input type="checkbox" id="kIntent"> Use it for anything Vector doesn't understand</label>
+          <label class="check"><input type="checkbox" id="kCommands"> Let it make Vector do things (animations, moves)</label>
+          <label class="check"><input type="checkbox" id="kSave"> Remember the conversation</label>
+        </div>
+        <button class="btn" type="submit">Save knowledge graph</button>
+        <div id="kgMsg" class="msg"></div>
+      </form>
+    </div>
+  </div>
+  </div>
+</div>
+
+<footer id="contact">
+  <p>vectortech.dev <span class="amber">·</span> Built by Jaceroo404! &amp; DevHayes</p>
+  <p style="margin-top:6px;">$ echo "thanks for stopping by"<span class="cursor"></span></p>
+</footer>
+
+<div class="useless-btn-wrap">
+  <button class="useless-btn" id="uselessBtn">Useless button!</button>
+</div>
+
+<div class="version-tag">v2.2.0</div>
+
+
+<div class="devmodal-overlay" id="pinOverlay" hidden>
+  <div class="devmodal">
+    <h3>Enter Code</h3>
+    <p class="devmodal-sub">This does absolutely nothing important.</p>
+    <input type="password" id="pinInput" maxlength="6" inputmode="numeric" placeholder="••••••">
+    <p class="pin-error" id="pinError" hidden>Wrong code.</p>
+    <div class="devmodal-actions">
+      <button id="pinSubmit">Enter</button>
+      <button id="pinCancel">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<div class="devmodal-overlay" id="testModeOverlay" hidden>
+  <div class="devmodal">
+    <h3>Test Mode</h3>
+    <p class="devmodal-sub">Force a theme to preview it:</p>
+    <div class="theme-picker">
+      <button data-theme-pick="red">Red CRT</button>
+      <button data-theme-pick="aqua">Aqua</button>
+      <button data-theme-pick="skeuomorphic">Skeuomorphic</button>
+      <button data-theme-pick="gold-shopping">Gold: Shopping</button>
+      <button data-theme-pick="gold-holiday">Gold: Dec 25</button>
+      <button data-theme-pick="bsod">Fake BSOD</button>
+    </div>
+    <button class="devmodal-close" id="testModeClose">Close</button>
+  </div>
+</div>
+
+<script src="site.js?v=2.2.0"></script>
+<script src="account.js?v=2.2.0"></script>
+</body>
+</html>
