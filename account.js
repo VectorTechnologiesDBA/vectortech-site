@@ -1,7 +1,7 @@
 // Account page for VTCS, the Vector Tech Community Server (server.vectortech.dev). The page is static; everything it shows
 // comes from the server's API, which allows this site's origin (CORS).
 "use strict";
-const API = "https://server.vectortech.dev";
+const API = "https://server.vectortech.dev:8443";
 const $ = id => document.getElementById(id);
 let token = "";
 try { token = localStorage.getItem("vppToken") || ""; } catch (e) {}
