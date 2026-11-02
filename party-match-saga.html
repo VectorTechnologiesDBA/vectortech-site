@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Party Match Saga — Vector Tech</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDYgMTA2Ij48ZyBmaWxsPSIjZmY0ZDRkIj48cmVjdCB4PSI4IiB5PSI4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9Ijg4IiB5PSI4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9IjgiIHk9IjE4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9Ijg4IiB5PSIxOCIgd2lkdGg9IjguOCIgaGVpZ2h0PSI4LjgiLz48cmVjdCB4PSIxOCIgeT0iMjgiIHdpZHRoPSI4LjgiIGhlaWdodD0iOC44Ii8+PHJlY3QgeD0iNzgiIHk9IjI4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9IjE4IiB5PSIzOCIgd2lkdGg9IjguOCIgaGVpZ2h0PSI4LjgiLz48cmVjdCB4PSI3OCIgeT0iMzgiIHdpZHRoPSI4LjgiIGhlaWdodD0iOC44Ii8+PHJlY3QgeD0iMjgiIHk9IjQ4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9IjY4IiB5PSI0OCIgd2lkdGg9IjguOCIgaGVpZ2h0PSI4LjgiLz48cmVjdCB4PSIyOCIgeT0iNTgiIHdpZHRoPSI4LjgiIGhlaWdodD0iOC44Ii8+PHJlY3QgeD0iNjgiIHk9IjU4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9IjM4IiB5PSI2OCIgd2lkdGg9IjguOCIgaGVpZ2h0PSI4LjgiLz48cmVjdCB4PSI1OCIgeT0iNjgiIHdpZHRoPSI4LjgiIGhlaWdodD0iOC44Ii8+PHJlY3QgeD0iMzgiIHk9Ijc4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9IjU4IiB5PSI3OCIgd2lkdGg9IjguOCIgaGVpZ2h0PSI4LjgiLz48cmVjdCB4PSI0OCIgeT0iODgiIHdpZHRoPSI4LjgiIGhlaWdodD0iOC44Ii8+PC9nPjwvc3ZnPg==">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAABmJLR0QA/wD/AP+gvaeTAAAE5klEQVR4nO3dzWpdZRTG8Wft5G5EQVGK/QqkBqXtTgbiDfQCClIEEaQIRShOnHgfnnOStPWjRts0UksRB+K8nXSQSSZOTvZykILjrrzhdD/5/+aL/RL+hL1hvYkEAAAAAAAAAAAAAAAAACcgKkPZ929IWik+82nMZr8XZzEC2ffnJb1VHL8fs9k/1WcvF+dWJH1XnL0tiaC9fSLpemky85qkctBddRB4HRE0rBA0rBA0rBA0rBA0rBA0rBA0rBA0rBA0rBA0rBA0rBA0rFS37Z7qaGvu1UXsFJ+Jscj8SRH/Fmf/anwaYLxqC/4bG28qc7X2xPgjJpNHpVmMQq6vX5T0dmk44seYTP6uPrv2yjEMFyR9W5rNvC2JoJ1lfqzqgv8wXJNUDpqPQlghaFghaFghaFghaFghaFghaFghaFghaFghaFghaFghaFghaFipbdtlPlHX3So+87fiHMYi85667qA0G/Fn49MA41Va8G8h+/4dSdVLAnsxne62PREkKft+RdJ7peGIH2I6XegVquqdwuOLuKDMb4rTtyQR9MnoJd0ozh5IWmjQfBTCCkHDCkHDCkHDCkHDCkHDCkHDCkHDCkHDCkHDCkHDCkHDCkHDyuK27YZhTxE3i7NcEjgpXXdXw1Bbzs980vg0wOm2uAX/9fV3Ja2Vhg8PH8bW1oO2J4IkZd+vKuJMaXg+vxPb2wu9QrW4Vw7pnDK/Lk0uLd2SRNAn47Iyawv+y8v7khYaNB+FsELQsELQsELQsELQsELQsELQsELQsELQsELQsELQsELQsELQsLLIbbtdRXxRmjw8fNj4LPjftiL2S5Pz+ePGZwFOt4Ut+LeQV6++r4jaJYGInZhOra5yZd+vSjpfGo7Yjul09FeoFvnKcXwR5yR9VZrNvCm/f2C0Junz0uQw7EsafdB8FMIKQcMKQcMKQcMKQcMKQcMKQcMKQcMKQcMKQcMKQcMKQcMKQcPK2LftdpT5WWk2c7fxaRZvGLbVdbXl/GHw+3kAYzfuBf+NjbMaho+K4z/HbPZr0wMtWG5sfKBhuFgbzs3Y3Bz9Fapxv3IMw1lJXxan55KsgtYwXFJ1wV96IWn0QfNRCCsEDSsEDSsEDSsEDSsEDSsEDSsEDSsEDSsEDSsEDSsEDSsEDSvj3raT7kv6tDTZdXttj/IaiNhU5ovSbNc9aHwaAMc16gX/FrLvVyRVLwncbXVJ4OVy/qXScMRmTKdcodL4XzmOL+KsMmtL8REHanVJ4OimSe0cR68ZBC0+CmGGoGGFoGGFoGGFoGGFoGGFoGGFoGGFoGGFoGGFoGGFoGGFoGGFbbvMe8o8KE63uySQuamjP2n76ljOBzyx4N/3q5IuF8e3Yza73+QcV658qK5bKw0PwyS2tvgtLV45pIgzyrxRnN3X0b3G4+u6c5Jq5+i655IIWnwUwgxBwwpBwwpBwwpBwwpBwwpBwwpBwwpBwwpBwwpBwwpBwwpBwwrbdvP5HS0v7xdnHzc7xzBMtLT0vDR7ePio2TkAvD5O/YJ/Cy+X82uXBCK+j+n0l8ZHOrV45Wih685Iul6azXwmiaAb4aMQVggaVggaVggaVggaVggaVggaVggaVggaVggaVggaVggaVggaVti2ayFzIulZaTai3SUBAAAAAAAAAAAAAAAAAAAA4HT5D/C3A1CjbWibAAAAAElFTkSuQmCC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=2.3.2">
+<script src="theme.js?v=2.3.2"></script>
+</head>
+<body>
+
+<div class="bsod-overlay" id="bsodOverlay" hidden>
+  <div class="bsod-face">:(</div>
+  <div class="bsod-text">
+    Your site ran into a problem and needs to restart. We're just collecting some project info, then we'll restart it for you.
+    <span class="bsod-code">VT_PROJECT_PRESERVATION_FAILURE</span>
+  </div>
+  <button class="bsod-btn" id="bsodContinue">Continue</button>
+</div>
+
+<div id="crashOverlay"></div>
+<div class="crash-text" id="crashText1" style="top:12%; left:8%;">SYSTEM ERROR</div>
+<div class="crash-text" id="crashText2" style="top:60%; left:52%;">REBOOTING...</div>
+<div class="crash-text" id="crashText3" style="top:40%; left:18%;">404_VT_CORE</div>
+<div class="crash-text" id="crashText4" style="top:25%; left:60%;">BUFFER_OVERFLOW</div>
+<div class="crash-text" id="crashText5" style="top:75%; left:12%;">CORE DUMPED</div>
+<div class="crash-text" id="crashText6" style="top:8%; left:45%;">VT_FATAL_EXCEPTION</div>
+
+<div id="dosOverlay"></div>
+<div id="forbiddenOverlay">
+  <div>
+    <h1>403 Forbidden</h1>
+    <p>You don't have permission to access <strong>/</strong> on this server.</p>
+    <p class="addr">vectortech.dev</p>
+  </div>
+</div>
+
+<header>
+  <div class="logo"><svg class="logo-mark" viewBox="0 0 268 36" width="200" height="27" fill="currentColor" aria-label="Vector Tech"><rect x="0" y="0" width="3.4" height="3.4"/><rect x="32" y="0" width="3.4" height="3.4"/><rect x="0" y="4" width="3.4" height="3.4"/><rect x="32" y="4" width="3.4" height="3.4"/><rect x="4" y="8" width="3.4" height="3.4"/><rect x="28" y="8" width="3.4" height="3.4"/><rect x="4" y="12" width="3.4" height="3.4"/><rect x="28" y="12" width="3.4" height="3.4"/><rect x="8" y="16" width="3.4" height="3.4"/><rect x="24" y="16" width="3.4" height="3.4"/><rect x="8" y="20" width="3.4" height="3.4"/><rect x="24" y="20" width="3.4" height="3.4"/><rect x="12" y="24" width="3.4" height="3.4"/><rect x="20" y="24" width="3.4" height="3.4"/><rect x="12" y="28" width="3.4" height="3.4"/><rect x="20" y="28" width="3.4" height="3.4"/><rect x="16" y="32" width="3.4" height="3.4"/><rect x="40" y="8" width="3.4" height="3.4"/><rect x="44" y="8" width="3.4" height="3.4"/><rect x="48" y="8" width="3.4" height="3.4"/><rect x="52" y="8" width="3.4" height="3.4"/><rect x="56" y="8" width="3.4" height="3.4"/><rect x="40" y="12" width="3.4" height="3.4"/><rect x="40" y="16" width="3.4" height="3.4"/><rect x="40" y="20" width="3.4" height="3.4"/><rect x="44" y="20" width="3.4" height="3.4"/><rect x="48" y="20" width="3.4" height="3.4"/><rect x="52" y="20" width="3.4" height="3.4"/><rect x="40" y="24" width="3.4" height="3.4"/><rect x="40" y="28" width="3.4" height="3.4"/><rect x="40" y="32" width="3.4" height="3.4"/><rect x="44" y="32" width="3.4" height="3.4"/><rect x="48" y="32" width="3.4" height="3.4"/><rect x="52" y="32" width="3.4" height="3.4"/><rect x="56" y="32" width="3.4" height="3.4"/><rect x="68" y="8" width="3.4" height="3.4"/><rect x="72" y="8" width="3.4" height="3.4"/><rect x="76" y="8" width="3.4" height="3.4"/><rect x="80" y="8" width="3.4" height="3.4"/><rect x="64" y="12" width="3.4" height="3.4"/><rect x="64" y="16" width="3.4" height="3.4"/><rect x="64" y="20" width="3.4" height="3.4"/><rect x="64" y="24" width="3.4" height="3.4"/><rect x="64" y="28" width="3.4" height="3.4"/><rect x="68" y="32" width="3.4" height="3.4"/><rect x="72" y="32" width="3.4" height="3.4"/><rect x="76" y="32" width="3.4" height="3.4"/><rect x="80" y="32" width="3.4" height="3.4"/><rect x="88" y="8" width="3.4" height="3.4"/><rect x="92" y="8" width="3.4" height="3.4"/><rect x="96" y="8" width="3.4" height="3.4"/><rect x="100" y="8" width="3.4" height="3.4"/><rect x="104" y="8" width="3.4" height="3.4"/><rect x="96" y="12" width="3.4" height="3.4"/><rect x="96" y="16" width="3.4" height="3.4"/><rect x="96" y="20" width="3.4" height="3.4"/><rect x="96" y="24" width="3.4" height="3.4"/><rect x="96" y="28" width="3.4" height="3.4"/><rect x="96" y="32" width="3.4" height="3.4"/><rect x="116" y="8" width="3.4" height="3.4"/><rect x="120" y="8" width="3.4" height="3.4"/><rect x="124" y="8" width="3.4" height="3.4"/><rect x="112" y="12" width="3.4" height="3.4"/><rect x="128" y="12" width="3.4" height="3.4"/><rect x="112" y="16" width="3.4" height="3.4"/><rect x="128" y="16" width="3.4" height="3.4"/><rect x="112" y="20" width="3.4" height="3.4"/><rect x="128" y="20" width="3.4" height="3.4"/><rect x="112" y="24" width="3.4" height="3.4"/><rect x="128" y="24" width="3.4" height="3.4"/><rect x="112" y="28" width="3.4" height="3.4"/><rect x="128" y="28" width="3.4" height="3.4"/><rect x="116" y="32" width="3.4" height="3.4"/><rect x="120" y="32" width="3.4" height="3.4"/><rect x="124" y="32" width="3.4" height="3.4"/><rect x="136" y="8" width="3.4" height="3.4"/><rect x="140" y="8" width="3.4" height="3.4"/><rect x="144" y="8" width="3.4" height="3.4"/><rect x="148" y="8" width="3.4" height="3.4"/><rect x="136" y="12" width="3.4" height="3.4"/><rect x="152" y="12" width="3.4" height="3.4"/><rect x="136" y="16" width="3.4" height="3.4"/><rect x="152" y="16" width="3.4" height="3.4"/><rect x="136" y="20" width="3.4" height="3.4"/><rect x="140" y="20" width="3.4" height="3.4"/><rect x="144" y="20" width="3.4" height="3.4"/><rect x="148" y="20" width="3.4" height="3.4"/><rect x="136" y="24" width="3.4" height="3.4"/><rect x="144" y="24" width="3.4" height="3.4"/><rect x="136" y="28" width="3.4" height="3.4"/><rect x="148" y="28" width="3.4" height="3.4"/><rect x="136" y="32" width="3.4" height="3.4"/><rect x="152" y="32" width="3.4" height="3.4"/><rect x="176" y="8" width="3.4" height="3.4"/><rect x="180" y="8" width="3.4" height="3.4"/><rect x="184" y="8" width="3.4" height="3.4"/><rect x="188" y="8" width="3.4" height="3.4"/><rect x="192" y="8" width="3.4" height="3.4"/><rect x="184" y="12" width="3.4" height="3.4"/><rect x="184" y="16" width="3.4" height="3.4"/><rect x="184" y="20" width="3.4" height="3.4"/><rect x="184" y="24" width="3.4" height="3.4"/><rect x="184" y="28" width="3.4" height="3.4"/><rect x="184" y="32" width="3.4" height="3.4"/><rect x="200" y="8" width="3.4" height="3.4"/><rect x="204" y="8" width="3.4" height="3.4"/><rect x="208" y="8" width="3.4" height="3.4"/><rect x="212" y="8" width="3.4" height="3.4"/><rect x="216" y="8" width="3.4" height="3.4"/><rect x="200" y="12" width="3.4" height="3.4"/><rect x="200" y="16" width="3.4" height="3.4"/><rect x="200" y="20" width="3.4" height="3.4"/><rect x="204" y="20" width="3.4" height="3.4"/><rect x="208" y="20" width="3.4" height="3.4"/><rect x="212" y="20" width="3.4" height="3.4"/><rect x="200" y="24" width="3.4" height="3.4"/><rect x="200" y="28" width="3.4" height="3.4"/><rect x="200" y="32" width="3.4" height="3.4"/><rect x="204" y="32" width="3.4" height="3.4"/><rect x="208" y="32" width="3.4" height="3.4"/><rect x="212" y="32" width="3.4" height="3.4"/><rect x="216" y="32" width="3.4" height="3.4"/><rect x="228" y="8" width="3.4" height="3.4"/><rect x="232" y="8" width="3.4" height="3.4"/><rect x="236" y="8" width="3.4" height="3.4"/><rect x="240" y="8" width="3.4" height="3.4"/><rect x="224" y="12" width="3.4" height="3.4"/><rect x="224" y="16" width="3.4" height="3.4"/><rect x="224" y="20" width="3.4" height="3.4"/><rect x="224" y="24" width="3.4" height="3.4"/><rect x="224" y="28" width="3.4" height="3.4"/><rect x="228" y="32" width="3.4" height="3.4"/><rect x="232" y="32" width="3.4" height="3.4"/><rect x="236" y="32" width="3.4" height="3.4"/><rect x="240" y="32" width="3.4" height="3.4"/><rect x="248" y="8" width="3.4" height="3.4"/><rect x="264" y="8" width="3.4" height="3.4"/><rect x="248" y="12" width="3.4" height="3.4"/><rect x="264" y="12" width="3.4" height="3.4"/><rect x="248" y="16" width="3.4" height="3.4"/><rect x="264" y="16" width="3.4" height="3.4"/><rect x="248" y="20" width="3.4" height="3.4"/><rect x="252" y="20" width="3.4" height="3.4"/><rect x="256" y="20" width="3.4" height="3.4"/><rect x="260" y="20" width="3.4" height="3.4"/><rect x="264" y="20" width="3.4" height="3.4"/><rect x="248" y="24" width="3.4" height="3.4"/><rect x="264" y="24" width="3.4" height="3.4"/><rect x="248" y="28" width="3.4" height="3.4"/><rect x="264" y="28" width="3.4" height="3.4"/><rect x="248" y="32" width="3.4" height="3.4"/><rect x="264" y="32" width="3.4" height="3.4"/></svg></div>
+</header>
+
+<div class="page-wrap">
+  <a class="back-link" href="index.html">&larr; back to projects</a>
+
+  <div class="page-panel">
+  <h1 class="page-title">Party Match Saga</h1>
+  <p class="page-sub">A match-3 game for iOS and Android where you can swap in your own art, sounds, speech and ads.</p>
+
+  <div class="content-block">
+    <h2>What it is</h2>
+    <p>
+      Party Match Saga is a match-3 puzzle game built in Unity, currently <strong>v1.1</strong>, with
+      versions for <strong>iOS</strong> and <strong>Android</strong>. It plays in portrait mode.
+    </p>
+    <ul class="spec-list">
+      <li><strong>Levels</strong> with goals, special candies and combos</li>
+      <li><strong>Tickets</strong> earned per level plus score</li>
+      <li><strong>Shop</strong> — spend tickets on power-ups and extra lives or moves</li>
+      <li><strong>Bonus rounds</strong> — Blackout, Chocolate, Glitch Out and Freeze Out, each ending with the bonus wheel</li>
+      <li><strong>Settings</strong> in one screen behind the gear icon: ads, music, sound effects and speech toggles</li>
+      <li><strong>Native text-to-speech</strong> announcer for any speech line you don't supply</li>
+    </ul>
+  </div>
+
+  <div class="content-block">
+    <h2>Download</h2>
+    <!-- Google Drive links for now. Swap for release URLs if a repo is added. -->
+    <div class="project-links" style="margin-left:0;">
+      <a class="btn" href="https://drive.google.com/file/d/1M5U0QTZddk6nwrqWay_S3uyR7SgrxZ_W/view?usp=sharing">Download for iOS</a>
+      <a class="btn" href="https://drive.google.com/file/d/1yztAcP0sQEwhu_-q0HFKpanEJD9hxPKf/view?usp=sharing">Download for Android</a>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Make your own asset pack</h2>
+    <p>
+      The whole gimmick: the game doesn't have its art and audio locked inside. It loads them at
+      runtime from a zip file called <strong>Resources.zip</strong>. Build your own, hand it to the
+      game, and everything you included replaces the default. Every asset is optional, so you can
+      reskin one thing or all of it.
+    </p>
+  </div>
+
+  <div class="content-block">
+    <h2>Quick start</h2>
+    <ul class="spec-list">
+      <li><strong>1.</strong> Make a folder named <strong>Resources</strong>, with a folder named <strong>PartyAssets</strong> inside it.</li>
+      <li><strong>2.</strong> Drop in the files you want to replace. Use the <strong>exact filenames</strong> listed below.</li>
+      <li><strong>3.</strong> Zip the <strong>Resources</strong> folder so the zip is named <strong>Resources.zip</strong>.</li>
+      <li><strong>4.</strong> Put Resources.zip in the right folder for your device (see <strong>Where it goes</strong> below), then open the game.</li>
+    </ul>
+    <div class="callout">
+      <strong>Rule of thumb:</strong> anything you leave out keeps its default. A speech line you leave
+      out is read by text-to-speech instead.
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Where it goes</h2>
+    <ul class="spec-list">
+      <li><strong>iPhone</strong> — Files app &gt; On My iPhone &gt; Party Match Saga &gt; <strong>Resources.zip</strong></li>
+      <li><strong>iPad</strong> — Files app &gt; On My iPad &gt; Party Match Saga &gt; <strong>Resources.zip</strong></li>
+      <li><strong>Android</strong> — Downloads folder &gt; PMS &gt; <strong>Resources.zip</strong></li>
+    </ul>
+  </div>
+
+  <div class="content-block">
+    <h2>Folder layout</h2>
+    <pre style="max-width:660px; overflow-x:auto; padding:14px 16px; border:1px solid var(--line); background:var(--bg-panel); color:var(--text); font-family:'IBM Plex Mono', monospace; font-size:13px; line-height:1.55;">Resources.zip
+└── Resources/
+    └── PartyAssets/
+        ├── Ads/                 (any video files, any names)
+        ├── Speech/              (voice lines + loops)
+        ├── Bubbles/             (bubble_&lt;color&gt;.png)
+        ├── tile0.png ... tile4.png
+        ├── music.mp3
+        ├── ticket.png
+        └── ...everything else, exact names</pre>
+  </div>
+
+  <div class="content-block">
+    <h2>Ads</h2>
+    <p>
+      Put video files in <strong>PartyAssets/Ads/</strong>. These are the one place where filenames
+      don't matter: use any names you like. The game plays an ad after each level, and players can turn
+      ads off in settings.
+    </p>
+    <div class="callout">
+      <strong>Video formats:</strong> not fully tested yet. <strong>MP4 is recommended.</strong> Other
+      video types might work, but we haven't tried them.
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Board art</h2>
+    <p>
+      PNG images. Most come in five color variants numbered <strong>0–4</strong>, and each has an
+      alternate night version with <strong>_night</strong> added to the name (for example
+      <strong>tile2_night.png</strong>).
+    </p>
+    <ul class="spec-list">
+      <li><strong>tile0.png</strong> – <strong>tile4.png</strong></li>
+      <li><strong>square0.png</strong> – <strong>square4.png</strong></li>
+      <li><strong>bomb0.png</strong> – <strong>bomb4.png</strong></li>
+      <li><strong>stripeh0.png</strong> – <strong>stripeh4.png</strong> (horizontal stripes)</li>
+      <li><strong>stripev0.png</strong> – <strong>stripev4.png</strong> (vertical stripes)</li>
+      <li><strong>colorbomb.png</strong> (and <strong>colorbomb_night.png</strong>)</li>
+      <li><strong>Bubbles/</strong> — <strong>bubble_blue</strong>, <strong>bubble_green</strong>, <strong>bubble_orange</strong>, <strong>bubble_purple</strong>, <strong>bubble_red</strong>, <strong>bubble_teal</strong>, <strong>bubble_yellow</strong> (.png)</li>
+    </ul>
+  </div>
+
+  <div class="content-block">
+    <h2>Bonus wheel and tickets</h2>
+    <ul class="spec-list">
+      <li><strong>ticket.png</strong> — the ticket picture. It flies around and shows up as the small and big counter icon. A wide image, about 2:1, looks best.</li>
+      <li><strong>wheel.png</strong> — the wheel disc. Square with transparent corners and <strong>8 equal slices</strong> of 45°, slice 1 starting at 12 o'clock and running clockwise. <strong>Slice 5</strong> (just past 6 o'clock, lower-left) is the jackpot. The game draws the numbers on top.</li>
+      <li><strong>wheel_labeled.png</strong> — the same disc with the numbers already drawn into the art. If this is present, the game skips drawing its own numbers.</li>
+      <li><strong>wheelpointer.png</strong> — the pointer at the top, drawn pointing <strong>down</strong> (tip at the bottom).</li>
+      <li><strong>wheelbg.png</strong> — full-screen background behind the wheel.</li>
+      <li><strong>Prize order</strong>, clockwise from 12 o'clock: 100, 250, 150, 500, <strong>10000 (jackpot, slice 5)</strong>, 300, 400, 750.</li>
+    </ul>
+  </div>
+
+  <div class="content-block">
+    <h2>Sound effects and music</h2>
+    <ul class="spec-list">
+      <li><strong>music</strong> — background music</li>
+      <li><strong>swap</strong>, <strong>pop1</strong> – <strong>pop6</strong>, <strong>bad</strong>, <strong>loose</strong>, <strong>win</strong></li>
+      <li><strong>special</strong>, <strong>square</strong>, <strong>bomb</strong>, <strong>stripe</strong>, <strong>colorbomb</strong></li>
+      <li><strong>tick</strong> — each slice clicking past on the wheel</li>
+      <li><strong>wheelwin</strong> — a prize lands</li>
+      <li><strong>jackpotsfx</strong> — the jackpot lands</li>
+    </ul>
+    <p>Use <strong>WAV</strong> or <strong>MP3</strong> files with these names.</p>
+  </div>
+
+  <div class="content-block">
+    <h2>Speech</h2>
+    <p>
+      Put voice recordings in <strong>PartyAssets/Speech/</strong> as <strong>.mp3</strong>,
+      <strong>.ogg</strong> or <strong>.wav</strong>, using these exact names. Any line you don't
+      provide uses text-to-speech.
+    </p>
+    <p><strong>Gameplay</strong></p>
+    <ul class="spec-list">
+      <li><strong>level_1</strong> – <strong>level_30</strong> — "Level N" at the start of each level</li>
+      <li><strong>combo_2</strong> – <strong>combo_10</strong> — "Combo N"</li>
+      <li><strong>radical</strong> — big pop</li>
+      <li><strong>totally_awesome</strong> — combo 4 and up</li>
+      <li><strong>boom</strong> — a special goes off</li>
+      <li><strong>goal_reached</strong> — score goal hit</li>
+      <li><strong>level_clear</strong> — level won</li>
+      <li><strong>out_of_moves_try_again</strong> — level lost</li>
+      <li><strong>no_moves_shuffling</strong> — the board shuffles</li>
+      <li><strong>speech_on</strong> — when speech is turned on in settings</li>
+    </ul>
+    <p><strong>Your own cheers</strong></p>
+    <ul class="spec-list">
+      <li><strong>extraline1</strong>, <strong>extraline2</strong>, <strong>extraline3</strong>… — number them 1, 2, 3 and so on. About 1 in 3 cheers gets swapped for a random one of these.</li>
+    </ul>
+    <p><strong>Bonus rounds and wheel</strong></p>
+    <ul class="spec-list">
+      <li><strong>blackout_bonus</strong>, <strong>color_removed</strong>, <strong>blackout_complete</strong>, <strong>blackloop</strong> — Blackout</li>
+      <li><strong>freeze_out</strong>, <strong>freeze_out_complete</strong>, <strong>freezeloop</strong> — Freeze Out</li>
+      <li><strong>chocolate_time</strong>, <strong>chocolate_complete</strong>, <strong>chocoloop</strong> — Chocolate</li>
+      <li><strong>glitch_out</strong>, <strong>system_restore</strong> (the board comes back after the outline is gone), <strong>glitch_complete</strong>, <strong>glitchloop</strong> — Glitch Out</li>
+      <li><strong>bonus_wheel</strong> — the wheel starts spinning</li>
+      <li><strong>jackpot</strong> — the wheel lands on the jackpot</li>
+    </ul>
+    <div class="callout">
+      <strong>Loops:</strong> the files ending in <strong>loop</strong> play on repeat during that bonus
+      round at full volume while the song is muted. They only play if speech is on (and for Freeze Out
+      and Chocolate, music too). If you don't supply <strong>glitchloop</strong>, that round is pure silence.
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Tips</h2>
+    <ul class="spec-list">
+      <li>Start small: swap one thing, zip it, load it, and check it before building the whole pack.</li>
+      <li>Filenames are exact and are matched as written, so check spelling and numbering.</li>
+      <li>Keep your pack to things you made or have the rights to use.</li>
+    </ul>
+  </div>
+  </div>
+</div>
+
+<footer id="contact">
+  <p>vectortech.dev <span class="amber">·</span> Built by Jaceroo404! &amp; DevHayes</p>
+  <p style="margin-top:6px;">$ echo "thanks for stopping by"<span class="cursor"></span></p>
+</footer>
+
+<div class="useless-btn-wrap">
+  <button class="useless-btn" id="uselessBtn">Useless button!</button>
+</div>
+
+<div class="version-tag">v2.3.2</div>
+
+
+<div class="devmodal-overlay" id="pinOverlay" hidden>
+  <div class="devmodal">
+    <h3>Enter Code</h3>
+    <p class="devmodal-sub">This does absolutely nothing important.</p>
+    <input type="password" id="pinInput" maxlength="6" inputmode="numeric" placeholder="••••••">
+    <p class="pin-error" id="pinError" hidden>Wrong code.</p>
+    <div class="devmodal-actions">
+      <button id="pinSubmit">Enter</button>
+      <button id="pinCancel">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<div class="devmodal-overlay" id="testModeOverlay" hidden>
+  <div class="devmodal">
+    <h3>Test Mode</h3>
+    <p class="devmodal-sub">Force a theme to preview it:</p>
+    <div class="theme-picker">
+      <button data-theme-pick="red">Red CRT</button>
+      <button data-theme-pick="aqua">Aqua</button>
+      <button data-theme-pick="skeuomorphic">Skeuomorphic</button>
+      <button data-theme-pick="gold-shopping">Gold: Shopping</button>
+      <button data-theme-pick="gold-holiday">Gold: Dec 25</button>
+      <button data-theme-pick="bsod">Fake BSOD</button>
+    </div>
+    <button class="devmodal-close" id="testModeClose">Close</button>
+  </div>
+</div>
+
+<script src="site.js?v=2.3.2"></script>
+</body>
+</html>

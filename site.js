@@ -21,6 +21,16 @@ window.addEventListener('load', function () { window.scrollTo(0, 0); });
 //   { name: 'Some item', href: 'https://...' }               named item with its own link
 //   { name: '...', href: '...', image: 'https://...' }       same, plus a thumbnail (shown on purchases.html only)
 var LATEST_PURCHASES = [
+  { name: 'Alcatel Idol 4 (Cricket)', href: 'https://www.ebay.com/itm/307191427915' },
+  { name: 'Nintendo Switch 2 Pro Controller', href: 'https://a.co/d/09hCgqjK' },
+  { name: 'LeapFrog My Best Pal Violet', href: 'https://a.co/d/03vMRPEG' },
+  { name: 'LeapFrog On-the-Go Story Pal', href: 'https://a.co/d/07L1kAy1' },
+  { name: 'Samsung Galaxy S Captivate (AT&T)', href: 'https://www.ebay.com/itm/860036917264' },
+  { name: 'Bop It! Tetris', href: 'https://www.ebay.com/itm/257752923107' },
+  { name: 'LeapFrog LeapPad Ultimate', href: 'https://www.ebay.com/itm/407172929007' },
+  { name: 'Bop It! Bounce', href: 'https://www.ebay.com/itm/168765551825' },
+  { name: 'LeapFrog My Own Leaptop', href: 'https://www.ebay.com/itm/297855604993' },
+  { name: 'LeapFrog Epic Learning Tablets Bundle', href: 'https://www.ebay.com/itm/800576936049' }
 ];
 
 // Normalizes any entry above to { name, href } (href is null when there's no listing).
@@ -49,6 +59,7 @@ function normalizePurchase(entry, i) {
     { html: '<span class="ok">[ OK ]</span> <span class="path">beepbar</span>         <span class="dim">audible progress bar, beeps + tts</span>', delay: 250 },
     { html: '<span class="ok">[ OK ]</span> <span class="path">victor-os</span>       <span class="dim">anki vector custom firmware</span>', delay: 250 },
     { html: '<span class="ok">[ OK ]</span> <span class="path">vector-plus-plus</span> <span class="dim">anki vector app, wirepod-ready</span>', delay: 250 },
+    { html: '<span class="ok">[ OK ]</span> <span class="path">party-match-saga</span> <span class="dim">match-3 game, swappable assets</span>', delay: 250 },
     { html: '<span class="ok">[ OK ]</span> <span class="path">games</span>           <span class="dim">scratch games + prototypes</span>', delay: 250 },
     { html: '<span class="ok">[ OK ]</span> <span class="path">purchases</span>       <span class="dim">latest pickups</span>', delay: 250 },
     { html: '', delay: 150 },
@@ -98,9 +109,9 @@ function normalizePurchase(entry, i) {
       ]
     },
     {
-      name: 'Victor-OS',
+      name: 'VictorOS',
       desc: 'Custom Anki Vector firmware built on WireOS',
-      longDesc: 'Custom firmware for the Anki Vector robot, shipped as victorv*.ota (* being the version number) and built on top of WireOS. After Anki shut down, community firmware kept Vector running but drifted from how the robot originally behaved. Victor-OS aims to close that gap — getting WireOS back as close to stock Anki as possible while keeping the openness of custom firmware.',
+      longDesc: 'Custom firmware for the Anki Vector robot, shipped as vicos-*.ota (* being the version number) and built on top of WireOS. After Anki shut down, community firmware kept Vector running but drifted from how the robot originally behaved. VictorOS aims to close that gap — getting WireOS back as close to stock Anki as possible while keeping the openness of custom firmware.',
       links: [
         { label: 'More Info', href: 'victor-os.html' }
       ]
@@ -111,6 +122,14 @@ function normalizePurchase(entry, i) {
       longDesc: 'A patched build of the original Anki Vector Android app (1.5.0), built by Hayes and beta tested by Jaceroo404!. The app\'s server calls are replaced so it talks to WirePod instead of Anki\'s long-gone cloud, and everything the old app did works.',
       links: [
         { label: 'More Info', href: 'vector-plus-plus.html' }
+      ]
+    },
+    {
+      name: 'Party Match Saga',
+      desc: 'Match-3 puzzle game for iOS and Android with swappable assets',
+      longDesc: 'A match-3 game built in Unity for iOS and Android (v1.1). Play levels with goals, special candies and combos, earn tickets, spend them in the shop on power-ups and extra lives or moves, and spin the bonus wheel after the four bonus rounds: Blackout, Chocolate, Glitch Out and Freeze Out. The twist is that the game loads its art, sounds, speech and ad videos from a Resources.zip you supply, so anyone can reskin it. The page has the full guide to building your own pack.',
+      links: [
+        { label: 'More Info', href: 'party-match-saga.html' }
       ]
     },
     {
@@ -379,6 +398,34 @@ var runCrashSequence = null;
     row.innerHTML = body;
     list.appendChild(row);
   });
+})();
+
+// ---------- New purchases banner ----------
+// Shows the same gold banner as Shopping Day, with a different message, whenever
+// LATEST_PURCHASES has entries. Skipped on Gold Days (those banners already cover
+// it) and on purchases.html itself (you're already there).
+(function () {
+  if (typeof LATEST_PURCHASES === 'undefined' || !LATEST_PURCHASES.length) return;
+  if (document.documentElement.getAttribute('data-theme') === 'gold') return;
+  if (document.getElementById('purchaseList')) return;
+
+  var n = LATEST_PURCHASES.length;
+  var onHome = !!document.getElementById('projectList');
+  var href = n === 1
+    ? (onHome ? '#projects' : 'index.html#projects')
+    : 'purchases.html';
+
+  var banner = document.createElement('div');
+  banner.className = 'gold-banner purchase-banner';
+  banner.innerHTML = '\uD83D\uDECD\uFE0F <strong>New purchase' + (n > 1 ? 's' : '') + '!</strong>'
+    + ' \u00b7 <a href="' + href + '">Take a look at my latest purchase' + (n > 1 ? 's' : '') + ' \u2192</a>';
+
+  var header = document.querySelector('header');
+  if (header && header.parentNode) {
+    header.parentNode.insertBefore(banner, header);
+  } else {
+    document.body.insertBefore(banner, document.body.firstChild);
+  }
 })();
 
 // ---------- Gold Day ----------

@@ -574,6 +574,7 @@
     animation: gold-shimmer 5s linear infinite;
   }
   html[data-theme="gold"] .gold-banner { display: block; }
+  .gold-banner.purchase-banner { display: block; }
   .gold-banner strong { font-weight: 600; }
   .gold-banner a {
     color: #2a1f05;

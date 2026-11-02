@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Victor-OS — Vector Tech</title>
+<title>VictorOS — Vector Tech</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDYgMTA2Ij48ZyBmaWxsPSIjZmY0ZDRkIj48cmVjdCB4PSI4IiB5PSI4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9Ijg4IiB5PSI4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9IjgiIHk9IjE4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9Ijg4IiB5PSIxOCIgd2lkdGg9IjguOCIgaGVpZ2h0PSI4LjgiLz48cmVjdCB4PSIxOCIgeT0iMjgiIHdpZHRoPSI4LjgiIGhlaWdodD0iOC44Ii8+PHJlY3QgeD0iNzgiIHk9IjI4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9IjE4IiB5PSIzOCIgd2lkdGg9IjguOCIgaGVpZ2h0PSI4LjgiLz48cmVjdCB4PSI3OCIgeT0iMzgiIHdpZHRoPSI4LjgiIGhlaWdodD0iOC44Ii8+PHJlY3QgeD0iMjgiIHk9IjQ4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9IjY4IiB5PSI0OCIgd2lkdGg9IjguOCIgaGVpZ2h0PSI4LjgiLz48cmVjdCB4PSIyOCIgeT0iNTgiIHdpZHRoPSI4LjgiIGhlaWdodD0iOC44Ii8+PHJlY3QgeD0iNjgiIHk9IjU4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9IjM4IiB5PSI2OCIgd2lkdGg9IjguOCIgaGVpZ2h0PSI4LjgiLz48cmVjdCB4PSI1OCIgeT0iNjgiIHdpZHRoPSI4LjgiIGhlaWdodD0iOC44Ii8+PHJlY3QgeD0iMzgiIHk9Ijc4IiB3aWR0aD0iOC44IiBoZWlnaHQ9IjguOCIvPjxyZWN0IHg9IjU4IiB5PSI3OCIgd2lkdGg9IjguOCIgaGVpZ2h0PSI4LjgiLz48cmVjdCB4PSI0OCIgeT0iODgiIHdpZHRoPSI4LjgiIGhlaWdodD0iOC44Ii8+PC9nPjwvc3ZnPg==">
 <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAABmJLR0QA/wD/AP+gvaeTAAAE5klEQVR4nO3dzWpdZRTG8Wft5G5EQVGK/QqkBqXtTgbiDfQCClIEEaQIRShOnHgfnnOStPWjRts0UksRB+K8nXSQSSZOTvZykILjrrzhdD/5/+aL/RL+hL1hvYkEAAAAAAAAAAAAAAAAACcgKkPZ929IWik+82nMZr8XZzEC2ffnJb1VHL8fs9k/1WcvF+dWJH1XnL0tiaC9fSLpemky85qkctBddRB4HRE0rBA0rBA0rBA0rBA0rBA0rBA0rBA0rBA0rBA0rBA0rBA0rFS37Z7qaGvu1UXsFJ+Jscj8SRH/Fmf/anwaYLxqC/4bG28qc7X2xPgjJpNHpVmMQq6vX5T0dmk44seYTP6uPrv2yjEMFyR9W5rNvC2JoJ1lfqzqgv8wXJNUDpqPQlghaFghaFghaFghaFghaFghaFghaFghaFghaFghaFghaFghaFipbdtlPlHX3So+87fiHMYi85667qA0G/Fn49MA41Va8G8h+/4dSdVLAnsxne62PREkKft+RdJ7peGIH2I6XegVquqdwuOLuKDMb4rTtyQR9MnoJd0ozh5IWmjQfBTCCkHDCkHDCkHDCkHDCkHDCkHDCkHDCkHDCkHDCkHDCkHDCkHDyuK27YZhTxE3i7NcEjgpXXdXw1Bbzs980vg0wOm2uAX/9fV3Ja2Vhg8PH8bW1oO2J4IkZd+vKuJMaXg+vxPb2wu9QrW4Vw7pnDK/Lk0uLd2SRNAn47Iyawv+y8v7khYaNB+FsELQsELQsELQsELQsELQsELQsELQsELQsELQsELQsELQsELQsLLIbbtdRXxRmjw8fNj4LPjftiL2S5Pz+ePGZwFOt4Ut+LeQV6++r4jaJYGInZhOra5yZd+vSjpfGo7Yjul09FeoFvnKcXwR5yR9VZrNvCm/f2C0Junz0uQw7EsafdB8FMIKQcMKQcMKQcMKQcMKQcMKQcMKQcMKQcMKQcMKQcMKQcMKQcPK2LftdpT5WWk2c7fxaRZvGLbVdbXl/GHw+3kAYzfuBf+NjbMaho+K4z/HbPZr0wMtWG5sfKBhuFgbzs3Y3Bz9Fapxv3IMw1lJXxan55KsgtYwXFJ1wV96IWn0QfNRCCsEDSsEDSsEDSsEDSsEDSsEDSsEDSsEDSsEDSsEDSsEDSsEDSvj3raT7kv6tDTZdXttj/IaiNhU5ovSbNc9aHwaAMc16gX/FrLvVyRVLwncbXVJ4OVy/qXScMRmTKdcodL4XzmOL+KsMmtL8REHanVJ4OimSe0cR68ZBC0+CmGGoGGFoGGFoGGFoGGFoGGFoGGFoGGFoGGFoGGFoGGFoGGFoGGFbbvMe8o8KE63uySQuamjP2n76ljOBzyx4N/3q5IuF8e3Yza73+QcV658qK5bKw0PwyS2tvgtLV45pIgzyrxRnN3X0b3G4+u6c5Jq5+i655IIWnwUwgxBwwpBwwpBwwpBwwpBwwpBwwpBwwpBwwpBwwpBwwpBwwpBwwrbdvP5HS0v7xdnHzc7xzBMtLT0vDR7ePio2TkAvD5O/YJ/Cy+X82uXBCK+j+n0l8ZHOrV45Wih685Iul6azXwmiaAb4aMQVggaVggaVggaVggaVggaVggaVggaVggaVggaVggaVggaVggaVti2ayFzIulZaTai3SUBAAAAAAAAAAAAAAAAAAAA4HT5D/C3A1CjbWibAAAAAElFTkSuQmCC">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=2.2.0">
-<script src="theme.js?v=2.2.0"></script>
+<link rel="stylesheet" href="styles.css?v=2.3.2">
+<script src="theme.js?v=2.3.2"></script>
 </head>
 <body>
 
@@ -47,20 +47,20 @@
   <a class="back-link" href="index.html">&larr; back to projects</a>
 
   <div class="page-panel">
-  <h1 class="page-title">Victor-OS</h1>
+  <h1 class="page-title">VictorOS</h1>
   <p class="page-sub">Custom firmware for the Anki Vector robot — WireOS, pulled back toward the original Anki experience.</p>
 
   <div class="content-block">
     <h2>What it is</h2>
     <p>
-      Victor-OS is custom firmware for the Anki Vector robot, built on top of
-      <strong>WireOS</strong>. It ships as <strong>victorv*.ota</strong> — where * is the version
-      number — using the same OTA update format Vector has always used.
+      VictorOS is custom firmware for the Anki Vector robot, built on top of
+      <strong>WireOS</strong>. It ships as <strong>vicos-*.ota</strong>, where * is the version
+      number, using the same OTA update format Vector has always used.
     </p>
     <p>
       When Anki shut down, Vector's cloud services went with it, and the community stepped in to keep
       the robots working. Those replacements kept Vector alive — but along the way, a lot of the
-      original feel drifted. Victor-OS exists to close that gap: take WireOS and get it back as close
+      original feel drifted. VictorOS exists to close that gap: take WireOS and get it back as close
       to stock Anki behaviour as possible.
     </p>
   </div>
@@ -68,16 +68,19 @@
   <div class="content-block">
     <h2>The goal</h2>
     <p>
-      Not a reinvention. The point is that a Vector running Victor-OS should feel like the robot you
+      Not a reinvention. The point is that a Vector running VictorOS should feel like the robot you
       took out of the box, rather than a robot running community firmware — while keeping the
       openness that makes custom firmware worth running in the first place.
     </p>
   </div>
   <div class="content-block">
     <h2>Download</h2>
-    <!-- Temporary Google Drive mirror. Swap for the GitHub release URL once the repo exists. -->
+    <p>To flash it, put your Vector in recovery mode, open its setup page and enter this OTA URL:</p>
+    <p><code>http://server.vectortech.dev:8088/vic/full/latest.ota</code></p>
+    <p>After that, it updates itself from VTCS, and you can check for updates in the app under Settings &rarr; Updates.</p>
     <div class="project-links" style="margin-left:0;">
-      <a class="btn" href="https://drive.google.com/file/d/1om06aL8mVngK6vtNwkXBVN2J-45Tm7ij/view?usp=sharing">Download Victor-OS</a>
+      <a class="btn" href="https://github.com/VectorTechnologiesDBA/VictorOS/releases/latest" target="_blank" rel="noopener">Download VictorOS</a>
+      <a class="btn" href="https://github.com/VectorTechnologiesDBA/VictorOS" target="_blank" rel="noopener">Source</a>
     </div>
   </div>
   </div>
@@ -92,7 +95,7 @@
   <button class="useless-btn" id="uselessBtn">Useless button!</button>
 </div>
 
-<div class="version-tag">v2.2.0</div>
+<div class="version-tag">v2.3.2</div>
 
 
 <div class="devmodal-overlay" id="pinOverlay" hidden>
@@ -124,6 +127,6 @@
   </div>
 </div>
 
-<script src="site.js?v=2.2.0"></script>
+<script src="site.js?v=2.3.2"></script>
 </body>
 </html>
